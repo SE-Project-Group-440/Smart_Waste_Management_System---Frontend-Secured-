@@ -26,47 +26,52 @@ import Wallet from "./Pages/Payment/Wallet";
 import WasteCollectedReport from "./Pages/WasteCollectedReport";
 import Waste_Collect_User from "./Pages/Waste_Schedule/Waste_Collect_User";
 import UserDashboard from "./Pages/UserDashBoard";
+import OAuthSuccess from "./Pages/OAuthSuccess"
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
+
+          <Route path="/oauth-success" element={<OAuthSuccess />} />
+
           <Route path="/schedule" element={<ScheduleForm />} />
           <Route path="/schedule/view" element={<ViewSchedule />} />
           <Route path="/schedule/update/:id" element={<UpdateForm />} />
 
-          <Route path="/payment" element={<PaymentManagement/>}/>
-          <Route path="/wallet" element= {<Wallet/>} />
-          <Route path="/success" element= {<Success/>} />
-          <Route path="/cancel" element= {<Cancel/>} />
+          <Route path="/payment" element={<PaymentManagement />} />
+          <Route path="/wallet" element={<Wallet />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
           <Route path="/payment-details/:userId" element={<PaymentDetails />} />
 
           <Route path="/wcuser" element={<Waste_Collect_User />} />
-          <Route path="/schedule/status/admin" element={<Schedule_Satus_Admin/>}/>
+          <Route path="/schedule/status/admin" element={<Schedule_Satus_Admin />} />
 
 
-          <Route path="/WasteCollection" element={<RecordCollection/>} />
-          <Route path="/WasteCollection/all" element={<AllWasteCollections/>} />
-          <Route path="/update-waste-collection/:id" element={<UpdateWasteCollection/>} />
+          <Route path="/WasteCollection" element={<RecordCollection />} />
+          <Route path="/WasteCollection/all" element={<AllWasteCollections />} />
+          <Route path="/update-waste-collection/:id" element={<UpdateWasteCollection />} />
 
 
 
-          <Route path="/feedbackForm" element={<FeedbackForm/>} />
-          <Route path="/myFeedback" element={<MyFeedback/>} />
-          <Route path="/editFeedback/update/:id" element={<EditFeedback/>} />
-          <Route path="/adminView" element={<AdminView/>} />
-          <Route path="/allFeedback" element={<AllFeedback/>} />
+          <Route path="/feedbackForm" element={<FeedbackForm />} />
+          <Route path="/myFeedback" element={<MyFeedback />} />
+          <Route path="/editFeedback/update/:id" element={<EditFeedback />} />
+          <Route path="/adminView" element={<AdminView />} />
+          <Route path="/allFeedback" element={<AllFeedback />} />
 
-          <Route path="/reportNavigation" element={<ReportNavigation/>} />
-          <Route path="/paymentReport" element={<PaymentReport/>} />
-          <Route path="/reports/schedules" element={<ScheduleReport/>} />
-          <Route path="/wasteCollectedReport" element={<WasteCollectedReport/>} />
+          <Route path="/reportNavigation" element={<ReportNavigation />} />
+          <Route path="/paymentReport" element={<PaymentReport />} />
+          <Route path="/reports/schedules" element={<ScheduleReport />} />
+          <Route path="/wasteCollectedReport" element={<WasteCollectedReport />} />
 
-          <Route path="/user" element={<UserDashboard/>} />
+          <Route path="/user" element={<UserDashboard />} />
 
 
           <Route path="/adminhome" element={<AdminHome />} />
